@@ -8,7 +8,7 @@ int main() {
 	int start_s = clock();
 	cout << "start";
 	
-	register int prime[1230] = {3, 5, 7};
+	register int prime[1230] = {3, 5, 7}; 
 
 	register int a = 3;
 
@@ -16,7 +16,7 @@ int main() {
 		if((i % 3 != 0) && (i % 5 != 0) && (i % 7 != 0)){
 			cout << i << " ";
 			prime[a] = i;
-			 a++;	
+			a++;	
 		}
 	}
 
@@ -25,40 +25,40 @@ int main() {
 	
 	for(register int i = 101; i <= 10000; i = (i + 2)){
 		YES :int count = 0, j = 0;
-        while(prime[j] <= sqrt(i)){
-        	if(j >= a){
-        		cout << i << " ";
-        		prime[a] = i;
-        		i = (i + 2);
-				a++;
-				goto YES;
-        	}
-            
-            if(i % prime[j] == 0){
-                count++;
+		while(prime[j] <= sqrt(i)){
+			if(j >= a){
+				cout << i << " ";
+				prime[a] = i;
+				i = (i + 2);
+					a++;
+					goto YES;
+			}
+
+		    	if(i % prime[j] == 0){
+				count++;
 				break;
 			}
 			j++;
 		}
-		
+
 		if(count == 0){
 			cout << i << " ";
 			prime[a] = i;
-            a++;
-        }
+			a++;
+		}
 	}
 	
-	for(register int i = 10001; i <= 100000000; i =				 (i + 2)){
+	for(register int i = 10001; i <= 100000000; i =	(i + 2)){
 		YESS :int count = 0, j = 0;
-        while(prime[j] <= sqrt(i)){
-        	if(j >= a){
-        		cout << i << " ";
-        		i = (i + 2);
+		while(prime[j] <= sqrt(i)){
+			if(j >= a){
+				cout << i << " ";
+				i = (i + 2);
 				goto YESS;
-        	}
-            
-            if(i % prime[j] == 0){
-                count++;
+			}
+
+			if(i % prime[j] == 0){
+				count++;
 				break;
 			}
 			j++;
