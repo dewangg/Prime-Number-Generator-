@@ -30,8 +30,8 @@ int main() {
 				cout << i << " ";
 				prime[a] = i;
 				i = (i + 2);
-					a++;
-					goto YES;
+				a++;
+				goto YES;
 			}
 
 		    	if(i % prime[j] == 0){
